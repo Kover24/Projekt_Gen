@@ -19,15 +19,19 @@
 <script src="js/scripts.js">
     </script>
 <body>
- <fieldset>
- <legend>Zgadnij liczbę</legend>
- <label for="guess">Wprowadź liczbę:</label>
- <input type="text" id="guess" value="" />
- <input type="button" onclick="yourGuess()" value="Zgadnij" /><br />
- <input type="button" onclick="newNumber()" value="Nowa liczba" />
- <input type="button" onclick="surrender()" value="Poddaj" /><br />
-</fieldset>
- <legend> Wynik </legend>
- <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+<div class="page-header" style="text-align:center;color:black;padding-top:5px;">
+    <h1>Zgadnij liczbę <small>Klich Bartłomiej oraz Mateusz Gibuła</small></h1>
+</div>
+<div class="container-fluid">
+    <div class="col-md-2 col-md-offset-5" style="text-align:center;">
+         <label for="guess">Wprowadź liczbę:</label>
+         <input class="form-control" type="text" id="guess" value="" />
+         <input class="btn btn-info submit_btn" type="button" onclick="yourGuess()" value="Zgadnij" /><br />
+         <input class="btn btn-info submit_btn" type="button" onclick="newNumber()" value="Nowa liczba" />
+         <input class="btn btn-danger submit_btn" type="button" onclick="surrender()" value="Poddaj" /><br />
+         <legend style="color:#cccccc;"> Wynik </legend>
+         <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+    </div>
+</div>
 </body>
 </html>
