@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekt Java Script</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<script src="js/scripts.js">
+    </script>
+<body>
+ <fieldset>
+ <legend>Zgadnij liczbę</legend>
+ <label for="guess">Wprowadź liczbę:</label>
+ <input type="text" id="guess" value="" />
+ <input type="button" onclick="yourGuess()" value="Zgadnij" /><br />
+ <input type="button" onclick="newNumber()" value="Nowa liczba" />
+ <input type="button" onclick="surrender()" value="Poddaj" /><br />
+</fieldset>
+ <legend> Wynik </legend>
+ <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+</body>
+</html>
