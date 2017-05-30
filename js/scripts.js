@@ -7,14 +7,20 @@ function yourGuess() {
     guess = document.getElementById("guess").value;
     guesses = document.getElementById("output");
 if (guess==null || guess==""){
-     alert('Wprowadź liczbę!');
+    $('body').append('<div class=\'alert alert-danger\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>Wprowadź liczbę</strong>-Liczba do odgadnięcia</div>');
+    setTimeout(function (){
+        $( ".alert" ).remove();
+    }, 3500);
     }
     else{
     if (check==false){
         checkNumber();
     }else{
     if (chances === 0) {
-        alert('Przegrałeś!');
+        $('body').append('<div class=\'alert alert-danger\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>Przegrałeś</strong></div>');
+        setTimeout(function (){
+            $( ".alert" ).remove();
+        }, 3500);
     } else {
     if (guess == numToGuess) {
         guesses.value = guesses.value + "\r" + "Odgadłeś liczbę! ("+guess+")";
@@ -37,7 +43,10 @@ function newNumber(){
 }
 function checkNumber() {
     if (numToGuess==null) {
-        alert('Najpierw musisz wygenerować liczbę!');
+        $('body').append('<div class=\'alert alert-danger\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>Błąd</strong>-Wygeneruj liczbę</div>');
+        setTimeout(function (){
+            $( ".alert" ).remove();
+        }, 3500);
     }else{check=true;}
 }
 function clearContent(element) {
@@ -47,10 +56,16 @@ function surrender(){
     if (check==false){
         checkNumber();
     }else{
-    alert('Liczbą do odgadnięcia było '+numToGuess);
+        $('body').append('<div class=\'alert alert-info\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>'+numToGuess+'</strong>-Liczba do odgadnięcia</div>');
+        setTimeout(function (){
+            $( ".alert" ).remove();
+        }, 3500);
         }
 }
 function win(){
-    alert('Gratulacje!');
+    $('body').append('<div class=\'alert alert-info\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>Gratulacje!</div>');
+    setTimeout(function (){
+        $( ".alert" ).remove();
+    }, 3500);
     newNumber();
 }
