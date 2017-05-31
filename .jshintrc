@@ -1,3 +1,4 @@
 {
-    "camelcase": true
+    "camelcase": true,
+    "unused":true
 }

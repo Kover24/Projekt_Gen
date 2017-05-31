@@ -1,6 +1,7 @@
 var chances = 5;
 var numToGuess;
 var check = false;
+var unusedVariable = '';
 function yourGuess() {
 
    
@@ -40,6 +41,8 @@ function newNumber(){
     numToGuess = Math.floor(Math.random()*100);
     chances = 5;
    // clearContent(output);
+    
+    
     check = true;
     if(numToGuess!==null & chances == 5){
         return true;
