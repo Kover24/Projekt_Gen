@@ -61,12 +61,16 @@ function clearContent(element) {
 function surrender(){
     if (check==false){
         checkNumber();
+        return false;
     }else{
+        
         $('body').append('<div class=\'alert alert-info\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>'+numToGuess+'</strong>-Liczba do odgadnięcia</div>');
         setTimeout(function (){
             $( ".alert" ).remove();
         }, 3500);
+        
         }
+        
 }
 function addNum(x,y) {
 return x+y;
@@ -79,5 +83,6 @@ function win(){
     newNumber();
 }
 module.exports = {
-    newNumber:newNumber
+    newNumber:newNumber,
+    surrender:surrender
 };

@@ -4,11 +4,16 @@
   "description": "projekt",
   "dependencies": {},
   "scripts": {
-    "scripts": "node_modules/.bin/mocha --opts tests/mocha.opts"
+    "scripts": "node_modules/.bin/mocha --opts tests/mocha.opts",
+    "jshint":"jshint --reporter=node_modules/jshint-stylish js/scripts.js",
+  //  "jshint-html": "jshint --reporter node_modules/jshint-html-reporter/reporter.js js/scripts.js > report.html"
   },
 
   "devDependencies": {
     "chai": "3.5.0",
-    "mocha": "3.2.0"
+    "mocha": "3.2.0",
+    "jshint":"2.9.4",
+    "jshint-html-reporter":"0.2.5",
+    "jshint-stylish":"2.2.1"
   }
 }
