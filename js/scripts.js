@@ -14,6 +14,7 @@ if (guess==null || guess==""){
     }
     else{
     if (check==false){
+        
         checkNumber();
     }else{
     if (chances === 0) {
@@ -38,8 +39,13 @@ if (guess==null || guess==""){
 function newNumber(){
     numToGuess = Math.floor(Math.random()*100);
     chances = 5;
-    clearContent(output);
+   // clearContent(output);
     check = true;
+    if(numToGuess!==null & chances == 5){
+        return true;
+    }else{
+        return false;
+    }
 }
 function checkNumber() {
     if (numToGuess==null) {
@@ -62,6 +68,9 @@ function surrender(){
         }, 3500);
         }
 }
+function addNum(x,y) {
+return x+y;
+}
 function win(){
     $('body').append('<div class=\'alert alert-info\' role=\'alert\' style=\'position: fixed; left:50px; top:0;width:100%;\'><strong>Gratulacje!</div>');
     setTimeout(function (){
@@ -69,3 +78,6 @@ function win(){
     }, 3500);
     newNumber();
 }
+module.exports = {
+    newNumber:newNumber
+};

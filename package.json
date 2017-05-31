@@ -1,0 +1,14 @@
+{
+  "name": "Game",
+  "version": "0.0.1",
+  "description": "projekt",
+  "dependencies": {},
+  "scripts": {
+    "scripts": "node_modules/.bin/mocha --opts tests/mocha.opts"
+  },
+
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
+  }
+}
